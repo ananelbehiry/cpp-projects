@@ -1,18 +1,17 @@
-# Factorial Program
-
-This is a simple C++ program that calculates the factorial of a number using a loop.
-
-## Code Features
-- Uses a function to calculate factorial
-- Uses a for loop from 1 to n
-- Takes input from the user
-- Prints the result in the console
-
-## How it works
-1. User enters a number
-2. Program passes it to factorial function
-3. Loop calculates the result
-4. Result is printed
-
-## Language
-C++
+#include <iostream>
+using namespace std;
+long long factorial(int n) {
+	long long fact = 1;
+	for (int i = 1;i <= n;i++) {
+		fact *= i;
+	}
+	cout << "The factorial for " << "(" << n << ")" << " = " << fact << endl;
+	return fact;
+}	
+int main() {
+	int n;
+	cout << "Enter a num to calculate the factorial : \n";
+	cin >> n;
+	factorial(n);
+	return 0;
+}
